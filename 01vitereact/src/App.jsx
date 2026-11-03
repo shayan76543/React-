@@ -1,6 +1,10 @@
+import Searching from './searching'
 function App() {
   return (
-    <h1>hello how are you   </h1>
-  )
+    <>
+      <Searching/>
+    </>
+  );
 }
-export default App
+
+export default App;
