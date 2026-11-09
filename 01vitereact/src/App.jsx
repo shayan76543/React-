@@ -1,8 +1,7 @@
-import Searching from './searching'
 function App() {
   return (
     <>
-      <Searching/>
+      <h1>Hello</h1>
     </>
   );
 }
