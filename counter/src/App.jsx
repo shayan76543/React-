@@ -1,52 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Student from "./student";
 
 function App() {
+  const [color,setColor]=useState("olive");
   return (
-    <>
-      <h1 className="bg-green-800 p-9 text-blue rounded-xl">
-        Hello this tailwind
-      </h1>
-
-      <div className="min-h-screen bg-gray-100 p-10">
-
-        <h1 className="text-3xl font-bold mb-8">
-          Student Dashboard
-        </h1>
-
-        <div className="flex flex-wrap gap-6">
-
-          <Student
-            name="Shayan"
-            age={18}
-            course="Computer Science"
-            status="Active"
-          />
-
-          <Student
-            name="Ahmad"
-            age={20}
-            course="Software Engineering"
-            status="Inactive"
-          />
-
-          <Student
-            name="Ali"
-            age={19}
-            course="Artificial Intelligence"
-            status="Active"
-          />
-          <Student
-          name="abdullah"
-          age={21}
-          course="Ai"
-          status="ACtive semi"
-          />
-
+    <div className="w-full h-screen duration-200 "
+    style={{backgroundColor:color}}>
+      <div className="fixed flex flex-wrap inset-x-0 justify-center bottom-12  px-3 py-2 bg-white rounded-3xl gap-2">
+        <button onClick={()=>setColor('red')} className="px-4 py-1 outline-0 rounded-full text-white shadow-lg bg-red-700">
+        Red
+        </button>
+                <button onClick={()=>setColor('yellow')} className="px-4 py-1 outline-0 rounded-full text-white shadow-lg bg-yellow-700">
+        Yellow
+        </button>
+                <button onClick={()=>setColor('pink')} className="px-4 py-1 outline-0 rounded-full text-white shadow-lg bg-pink-700">
+        Pink
+        </button>
+                <button onClick={()=>setColor('orange')} className="px-4 py-1 outline-0 rounded-full text-white shadow-lg bg-orange-700">
+        Orange
+        </button>
+                <button onClick={()=>setColor('amber')} className="px-4 py-1 outline-0 rounded-full text-white shadow-lg bg-amber-900">
+        Amber
+        </button>
         </div>
-      </div>
-    </>
-  );
+    </div>    
+  )
 }
 
 export default App;
